@@ -1,0 +1,32 @@
+﻿@page "/hill-pattern"
+<h3>Hill_pattern</h3>
+
+<ul>
+    <li>Decreasing triangle pattern - color: white</li>
+    <li>Increasing triangle pattern - color: cadetblue</li>
+    <li>Increasing triangle pattern - color: blue</li>
+
+</ul>
+<div style="font-size: 50px">
+    @for(int i = 1; i<= Number; i++)
+    {
+        <div>
+            @for(int j = i; j <= Number; j++)
+            {
+                <span style="color: white">? </span>
+            }
+            @for(int j = 1; j < i; j++)
+            {
+                <span style="color: cadetblue">? </span>
+            }
+            @for(int j = 1; j <= i; j++)
+            {
+                <span style="color: blue">? </span>
+            }
+        </div>
+    }
+    
+</div>
+@code {
+    private int Number = 5;
+}
