@@ -1,0 +1,26 @@
+﻿@page "/right-sided-triangle-pattern"
+<h3>Right sided triangle pattern</h3>
+
+<ul>
+    <li>Decreasing triangle pattern - # (color: white)</li>
+    <li>Increasing triangle pattern - # (color: red)</li>
+</ul>
+<div style="font-size: 50px;">
+    @for(int i = 0; i < Number; i++)
+    {
+        <div>
+            @for(int j = i; j < Number; j++)
+            {
+                <span style="color:white"># </span>
+            }
+            @for(int j = 0; j <= i; j++)
+            {
+                <span style="color:red"># </span>
+            }
+
+        </div>
+    }
+</div>
+@code {
+    private int Number = 5;
+}
