@@ -1,0 +1,52 @@
+﻿@page "/diamond-pattern"
+<h3>Diamond_pattern</h3>
+<ul>
+    <li>Hill pattern</li>
+    <li>Reverse hill pattern</li>
+</ul>
+
+<div style="font-size: 25px">
+    @for(int i = 1; i <= Number; i++)
+    {
+        <div>
+            @for(int j = i; j <= Number; j++)
+            {
+                <span style="color: white">O</span>
+            }
+            @for(int j = 2; j < i; j++)
+            {
+                <span style="color:blue">O</span>
+            }
+            @for(int j = 2; j<= i; j++)
+            {
+                <span style="color:darkred">O</span>
+            }
+
+
+        </div>
+       
+    }
+</div>
+<div style="font-size:25px">
+    @for (int i = 1; i <= Number; i++)
+    {
+        <div>
+            @for (int j = 1; j < i; j++)
+            {
+                <span style="color:white">O</span>
+            }
+            @for (int j = i; j < Number; j++)
+            {
+                <span style="color: darkred">O</span>
+            }
+            @for (int j = i; j <= Number; j++)
+            {
+                <span style="color: blue">O</span>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private int Number = 5;
+}

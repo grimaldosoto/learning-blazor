@@ -13,7 +13,7 @@ a, .btn-link {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 .content {
@@ -50,11 +50,16 @@ h1:focus {
     border-color: #929292;
 }
 
-.home-section{
+.home-section {
     font-size: 40px;
 }
 
-.home-section li{
-    background-color:blue;
-    color:white
-}
+    .home-section ul {
+        color: white
+    }
+    .home-section .even{
+        background-color: blue;
+    }
+    .home-section .odd{
+        background-color: green;
+    }
